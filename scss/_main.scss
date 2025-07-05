@@ -17,10 +17,13 @@
 }
 
 .main {
+  display: grid;
+  place-items: center;
 
   .profile-container {
     width: 320px;
     height: 612px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -58,7 +61,7 @@
         flex-direction: column;
         justify-content: space-between;
 
-        li {
+        .contact-list__item {
           display: flex;
           align-items: center;
         }
@@ -89,11 +92,38 @@
     }
 
     .contacts-container::before {
-      content: url("../static/img/arrow.svg");
+      content: url("../static/img/arrow-up.svg");
       position: absolute;
       top: -39px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+  .about-me {
+    width: 320px;
+
+    p {
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
+      margin-bottom: 24px;
+    }
+
+    .about-me__details {
+      position: relative;
+      padding: 40px 16px 40px 16px;
+      border: 1px solid #ffffff;
+    }
+
+    .about-me__details::before {
+      content: url("../static/img/arrow-down.svg");
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: black;
       z-index: 1;
     }
   }
