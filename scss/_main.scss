@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 46px;
+
+  .logo__link {
+    display: block;
+    height: inherit;
+    width: fit-content;
+  }
+}
+
+.main {
+
+  .profile-container {
+    width: 320px;
+    height: 612px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .profile-img {
+      width: inherit;
+      height: 353px;
+    }
+
+    .contacts-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      left: 0;
+      bottom: 0;
+      width: inherit;
+      height: 288px;
+      padding: 24px 16px 40px 16px;
+      background-color: $accent-color;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      .contacts-info h2 {
+        font-family: 'Redcollar', sans-serif;
+        font-weight: 400;
+        margin-bottom: 4px;
+      }
+
+      .contacts-list {
+        width: 100%;
+        height: 144px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li {
+          display: flex;
+          align-items: center;
+        }
+
+        .icon {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          margin-right: 14px;
+        }
+
+        .phone-icon {
+          background: $phone-icon;
+        }
+
+        .mail-icon {
+          background: $mail-icon;
+        }
+
+        .telegram-icon {
+          background: $telegram-icon;
+        }
+
+        .github-icon {
+          background: $github-icon;
+        }
+      }
+    }
+
+    .contacts-container::before {
+      content: url("../static/img/arrow.svg");
+      position: absolute;
+      top: -39px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+}

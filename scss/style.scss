@@ -1,0 +1,45 @@
+@use 'variables' as *;
+@use 'main';
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../static/fonts/TTCommons-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Redcollar';
+  src: url('../static/fonts/Redcollar.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family-main;
+  color: $text-color;
+  background-color: $main-color;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: color .2s ease-in-out;
+}
+
+a:hover {
+  color: rgba($main-color, .5);
+}
